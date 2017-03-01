@@ -13,7 +13,7 @@ public class TreeNode {
 
     // package access members
     TreeNode left;   // left node
-    int data;        // data item	          - data will differ depending on the application.
+    int data;        // data item - data will differ depending on the application.
     TreeNode right;  // right node
 
     // Constructor: initialize data to d and make this a leaf node
