@@ -26,17 +26,17 @@ public class Assignment3BinaryTrees {
 
             String input = JOptionPane.showInputDialog("Insert Positive Int for Tree: ");
             intVal = Integer.parseInt(input);
-            if (intVal<0) {
+            if (intVal<=0) {
                 brLoop=true;
+                System.out.println();
             } else {
                 System.out.print(intVal + " ");
                 tree.insertNode(intVal);
             }
         }
-
-        System.out.println("\n\nInorder traversal");
+        
         tree.inorderTraversal();
-
+        
         System.out.println();
         System.exit(0);
 

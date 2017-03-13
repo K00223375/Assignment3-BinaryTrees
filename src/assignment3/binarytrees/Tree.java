@@ -13,6 +13,7 @@ public class Tree {
 
     private TreeNode root;
 
+    String answer="";
     // Construct an empty Tree of integers
     public Tree() {
         root = null;
@@ -30,6 +31,7 @@ public class Tree {
 
     public synchronized void inorderTraversal() {
         inorderHelper(root);
+        System.out.println(answer);
     }
 
     // Recursive method to perform inorder traversal
@@ -38,7 +40,32 @@ public class Tree {
             return;
         }
         inorderHelper(node.left);
-        System.out.print(node.data + " ");
+        //System.out.print(node.data + " ");
+        checkBranch(node);
         inorderHelper(node.right);
+        
     }
+    
+    private void checkBranch(TreeNode node)
+    {
+        if(node.left == null && node.right == null)
+        {
+            answer += node.data +": is a Leaf \n";
+        }
+        else if (node.left == null && node.right != null)
+        {
+            answer += node.data +": Right Subtree: " + node.right.data +"\n";
+        }
+        else if (node.left != null && node.right == null)
+        {
+            answer += node.data +": Left Subtree: " + node.left.data +"\n";
+        }
+        else
+        {
+            answer += node.data +": Left Subtree " + node.left.data + " Right Subtree: " + node.right.data +"\n";
+        }
+        
+    }
+    
+    
 }
