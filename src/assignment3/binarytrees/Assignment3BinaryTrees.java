@@ -36,7 +36,6 @@ public class Assignment3BinaryTrees {
         }
         
         tree.inorderTraversal();
-        
         System.out.println();
         System.exit(0);
 
